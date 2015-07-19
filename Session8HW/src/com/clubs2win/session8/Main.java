@@ -15,7 +15,7 @@ public class Main {
         System.out.println("2 is prime. " + isPrime(2));
         System.out.println("25 is prime. " + isPrime(25));
         System.out.println("9 is prime. " + isPrime(9));
-        System.out.println("100 is prime. " + isPrime(17));
+        System.out.println("100 is prime. " + isPrime(100));
         System.out.println("Is Palindrome problem below");
         System.out.println("123 is palindrome. " + isPalindrome(123));
         System.out.println("121 is palindrome. " + isPalindrome(121));
@@ -24,7 +24,7 @@ public class Main {
 
     }
     public static boolean isPalindrome (int n){
-        int palindrome = n; // copied number into variable
+        int palindrome = n;
         int reverse = 0;
 
         while (palindrome != 0) {
@@ -42,12 +42,13 @@ public class Main {
     The if line  in the for loop, is when n/j has no remainder, so when n is a multiple of j, n is not a prime
      */
     public static boolean isPrime (int n){
+        double sqrt =  Math.sqrt(n);
         boolean prime = true;
         if (n % 2 == 0)
             prime = false;
         if (n == 2)
             prime = true;
-        for (int j = 3; j <= Math.sqrt(n); j+=2) {
+        for (int j = 3; j <= sqrt && prime; j+=2) {
             if (n % j == 0) {
                 prime =  false;
             }
