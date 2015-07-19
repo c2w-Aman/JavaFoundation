@@ -39,6 +39,7 @@ public class Main {
 
     /*
     Assume that int n for isPrime is positive
+    The if line  in the for loop, is when n/j has no remainder, so when n is a multiple of j, n is not a prime
      */
     public static boolean isPrime (int n){
         boolean prime = true;
