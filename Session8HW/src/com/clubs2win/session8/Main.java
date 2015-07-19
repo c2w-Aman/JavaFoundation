@@ -37,6 +37,9 @@ public class Main {
         return n == reverse;
     }
 
+    /*
+    Assume that int n for isPrime is positive
+     */
     public static boolean isPrime (int n){
         boolean prime = true;
         if (n % 2 == 0)
@@ -53,9 +56,7 @@ public class Main {
 
     }
     public static boolean isEven (int n ) {
-        boolean even;
-        even = (n / 2) * 2 == n;
-        return even;
+        return ((n / 2) * 2 == n);
         }
 
 }
